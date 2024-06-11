@@ -9,4 +9,6 @@ Feature: Buy Product from Amazon ECommerce site
 
     Examples:
     | product_name | product_number_in_search_results |
+    | monitor      | 1                                |
+    | laptops      | 2                                |
     | headphones, keyboards | 1, 1                    |

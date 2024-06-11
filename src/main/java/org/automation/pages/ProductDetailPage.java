@@ -36,7 +36,12 @@ public class ProductDetailPage extends BasePage {
         driver.navigate().refresh();
         wait.until(ExpectedConditions.visibilityOf(btnAddToCart));
         btnAddToCart.click();
-        Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(6));
+        try{
+            Thread.sleep(5000);
+        }catch (Exception e){
+
+        }
+
         // wait.until(ExpectedConditions.visibilityOf(btnClose));
         // btnClose.click();
         // wait.until(ExpectedConditions.invisibilityOf(btnClose));

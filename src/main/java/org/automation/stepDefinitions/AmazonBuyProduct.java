@@ -45,6 +45,7 @@ public class AmazonBuyProduct {
         List<String> productList;
         List<String> searchResultIndex;
         if(productName.contains(",")){
+            GlobalParams.reqFields.put("MULTIPLE_PRODUCTS","TRUE" );
             productList = Arrays.asList(productName.split(","));
             searchResultIndex = Arrays.asList(productIndex.split(","));
             for(int i=0;i<productList.size();i++){

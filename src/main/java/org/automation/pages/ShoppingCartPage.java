@@ -33,7 +33,11 @@ public class ShoppingCartPage extends BasePage {
         }
         int expectedProductValue = Integer.parseInt(GlobalParams.reqFields.get(productName.toUpperCase()+"_PRICE"));
         for (int i = 0; i < priceOnCartPage.size(); i++){
-            assert priceOnCartPage.get(i).intValue() == expectedProductValue;
+            if(GlobalParams.reqFields.get("MULTIPLE_PRODUCTS")=="TRUE"){
+                assert priceOnCartPage.contains(expectedProductValue);
+            }else{
+                assert priceOnCartPage.get(i).intValue() == expectedProductValue;
+            }
         }
     }
 
