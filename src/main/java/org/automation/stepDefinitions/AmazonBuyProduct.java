@@ -47,7 +47,7 @@ public class AmazonBuyProduct {
         if(productName.contains(",")){
             productList = Arrays.asList(productName.split(","));
             searchResultIndex = Arrays.asList(productIndex.split(","));
-            for(int i=0;i<=productList.size();i++){
+            for(int i=0;i<productList.size();i++){
                 amazonHomePage.productSearch(productList.get(i));
                 amazonHomePage.openProductDetailsPage(Integer.parseInt(searchResultIndex.get(i).trim()));
                 productDetailPage.switchToWindow();

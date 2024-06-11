@@ -36,7 +36,7 @@ public class ProductDetailPage extends BasePage {
         driver.navigate().refresh();
         wait.until(ExpectedConditions.visibilityOf(btnAddToCart));
         btnAddToCart.click();
-        wait.until(ExpectedConditions.visibilityOf(btnClose));
+        // wait.until(ExpectedConditions.visibilityOf(btnClose));
         // btnClose.click();
         // wait.until(ExpectedConditions.invisibilityOf(btnClose));
     }
